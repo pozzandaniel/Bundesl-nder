@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="./style.css">
     <title>Bundesländer</title>
 </head>
-<body onload="includeHTML()">
+<body onload="init()">
     <div class="bundeslaender-container">
         <div w3-include-html="./header.html" class="bundesheadline"></div>
-        <div w3-include-html="./footer.html" class="bundesfooter"></div>
+        <div class="content"><div id="bundesMatrix" class="bundes-matrix">
+        </div>
+        
+        </div>
     </div> 
 </body>
 </html>

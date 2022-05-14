@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bundeslaender-container {
+    width: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+
+    /* margin: 5px; */
+}
+
+.bundesheadline {
+    background-color: rgba(0, 0, 0, 0.05);
+    
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bundes-matrix {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.bundes-box {
+    width: 30.15%;
+    border: solid 10px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.bundes-box h4, .bundes-box p {
+    padding: 10px;
+}
+
+.text-gray {
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+@media (max-width: 1000px){
+    .bundeslaender-container {
+        width: 80%;
+    }
+    .bundes-box {
+        width: 45%;
+    }
+    .bundes-matrix{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px){
+    .bundes-box{
+        width: 42%;
+    }
+}
+
+@media (max-width: 500px){
+    .bundes-box{
+        width: 100%;
+    }
+}
