@@ -4,6 +4,14 @@ body {
     align-items: center;
 }
 
+h1 {
+    margin: 14px;
+}
+
+h4, p {
+    margin: 0;
+}
+
 .bundeslaender-container {
     width: 950px;
     display: flex;
@@ -63,10 +71,10 @@ body {
 
 @media (max-width: 1000px){
     .bundeslaender-container {
-        width: 80%;
+        width: 90%;
     }
     .bundes-box {
-        width: 45%;
+        width: 29%;
     }
     .bundes-matrix{
         justify-content: center;
