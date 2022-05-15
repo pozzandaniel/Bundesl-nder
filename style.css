@@ -49,6 +49,18 @@ body {
     font-weight: 600;
 }
 
+#filterBox {
+    margin: 10px;
+}
+
+.index-letter {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
 @media (max-width: 1000px){
     .bundeslaender-container {
         width: 80%;

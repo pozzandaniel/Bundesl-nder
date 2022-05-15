@@ -27,11 +27,45 @@ function renderBundeslaender(){
         <a href="${url}" class= "bundes-box" id= "bundes-${i}">
             <h4>${name}</h4>
             <p class="text-gray">${population} Millionen</p>
-        </a>
-        
+        </a>        
     `;
+    pushLetters(i, name);
     }
     
+}
+
+let index = [];
+
+function pushLetters(i, name) {
+    let firstLetter = name.charAt(0);
+    if(index.indexOf(firstLetter) == -1){
+        index.push(firstLetter);
+        let filterBox = document.getElementById('filterBox');
+        filterBox.innerHTML += `<span onclick="showBundeslaender('${firstLetter}')" class="index-letter">${firstLetter}</span>`;
+    }
+}
+
+async function showBundeslaender(firstLetter) {
+    document.getElementById('bundesMatrix').innerHTML = '';
+    await loopBundeslaender(firstLetter);
+}
+
+function loopBundeslaender(firstLetter){
+    for (let i = 0; i < bundeslandList.length; i++) {
+        let name = bundeslandList[i].name;
+        let inhabitans = bundeslandList[i].population;
+        let population = `${inhabitans}`.replace(".", ",");
+        let url = bundeslandList[i].url;
+        if(firstLetter == name.charAt(0)){
+            document.getElementById('bundesMatrix').innerHTML += `
+            <a href="${url}" class= "bundes-box" id= "bundes-${i}">
+                <h4>${name}</h4>
+                <p class="text-gray">${population} Millionen</p>
+            </a>        
+            `;
+
+        }
+    }
 }
 
 let bundeslandList = [
